@@ -1,10 +1,9 @@
-f = open("input.txt", "r")
+f1 = open("input.txt", "r")
+f2 = open("input.txt", "r")
 
 #PART 1
-sum = 0
-sumMayor = 0
-sumActual = 0
-for i in f.readlines():
+sum = 0; sumMayor = 0; sumActual = 0
+for i in f1.readlines():
     if i != "\n":
         sum = sum + int(i)
         continue
@@ -15,20 +14,13 @@ for i in f.readlines():
     sum = 0
 print(sumMayor)
 
-
-f = open("input.txt", "r")
-
 #PART 2
-sum = 0
-sumMayor = 0
-sumMayor2 = 0
-sumMayor3 = 0
-sumActual = 0
-for i in f.readlines():
+sum = 0; sumMayor = 0; sumMayor2 = 0; sumMayor3 = 0; sumActual = 0
+for i in f2.readlines():
     if i != "\n":
         sum = sum + int(i)
         continue
-    
+
     sumActual = sum
     sumAuxiliar = 0
     if sumActual > sumMayor:
@@ -42,6 +34,3 @@ for i in f.readlines():
         sumMayor3 = sumActual
     sum = 0
 print(sumMayor + sumMayor2 + sumMayor3)
-
-# 69206
-# 197400
